@@ -30,7 +30,7 @@ class SystemConfiguration:
     @staticmethod
     def __start_option_2():
         Logger.add_record("[+] Updates Enabled", status=LoggerStatus.SUCCESS)
-        os.system("sudo pacman -Sy")
+        os.system("sudo pacman -Syu")
 
     @staticmethod
     def __start_option_3():

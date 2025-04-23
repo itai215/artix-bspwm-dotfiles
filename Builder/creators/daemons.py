@@ -9,9 +9,9 @@ class Daemons:
 
     @staticmethod
     def __enable_network_daemon():
-        os.system("sudo systemctl enable NetworkManager")
+        os.system("sudo dinitctl enable NetworkManager")
     
     @staticmethod
     def __enable_bluetooth_daemon():
-        os.system("sudo systemctl enable bluetooth.service")
-        os.system("sudo systemctl start bluetooth.service")
+        os.system("sudo dinitctl enable bluetooth.service")
+        os.system("sudo dinitctl start bluetooth.service")

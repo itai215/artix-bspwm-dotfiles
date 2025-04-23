@@ -4,7 +4,7 @@ choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu)
 case "$choice" in
   Lock) sh $HOME/bin/screen-lock ;;
   Logout) pkill -KILL -u "$USER" ;;
-  Suspend) systemctl suspend && sh $HOME/bin/screen-lock ;;
-  Reboot) systemctl reboot ;;
-  Shutdown) systemctl poweroff ;;
+  Suspend) dinitctl suspend && sh $HOME/bin/screen-lock ;; 
+  Reboot) dinitctl reboot ;; 
+  Shutdown) dinitctl poweroff ;;
 esac
